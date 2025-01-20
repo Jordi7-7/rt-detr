@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
 function App() {
@@ -75,10 +76,12 @@ function App() {
       {previewUrl && (
         <div className="mt-4 w-md max-w-md">
           <h2 className="text-lg font-bold text-gray-700 text-center">Image Preview</h2>
-          <img
+          <Image
             src={previewUrl}
             alt="Selected preview"
             className="mt-2 w-full rounded-lg shadow-md"
+            width={40}
+            height={40}
           />
         </div>
       )}
