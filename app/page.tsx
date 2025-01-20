@@ -23,7 +23,7 @@ function App() {
     formData.append('image', selectedFile);
 
     try {
-      const response = await fetch('https://your-api-endpoint.com/predict', {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`, {
         method: 'POST',
         body: formData,
       });
